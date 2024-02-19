@@ -13,9 +13,7 @@ import os
 
 class Loader(Dataset):
     def __init__(self, root_path="../data/beibei", behavior_list=["click","buy"]):
-        # 读取多行为的
         cprint(f'loading [{root_path}]')
-        # 加载 该数据集的总user 和 item
         total_user_item_num_path = join(root_path, "ui_num.pkl")
         with open(total_user_item_num_path, "rb") as f:
             user_item_dict = pickle.load(f)
@@ -24,7 +22,6 @@ class Loader(Dataset):
         cprint(f'dataset INFO:')
         print(f"user num:{self.n_user}, item num:{self.m_item}")
         
-        # 针对每一个数据开始进行提取
         self.old_behavior_list = behavior_list
         behavior_list = []
         for order_bh in self.old_behavior_list:
