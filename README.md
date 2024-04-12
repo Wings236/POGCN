@@ -8,12 +8,12 @@ In this study, we utilize the partial order relation to model multi-behavior int
 `pip install -r requirements.txt`
 
 ## Dataset
-We provide the processed datasets: beibei.
+We provide the processed datasets: taobao.
 
 ## An example to run
-run POGCN on beibei dataset:
+run POGCN on taobao dataset:
   
-`cd code && python main.py --decay=1e-4 --lr=0.001 --layer=3 --seed=8888 --dataset="beibei" --behaviors "['click', 'cart', 'buy']" --level 1.0 --sample_level 1.0 --topks="[20]" --recdim=64`
+`cd code && python main.py --decay=1e-4 --lr=0.001 --layer=3 --seed=8888 --dataset="taobao" --behaviors "['click', ['cart', 'fav'], 'buy']" --level 1.0 --sample_level 1.0 --topks="[20]" --recdim=64`
 
 
 
