@@ -12,7 +12,7 @@ import world
 import os
 
 class Loader(Dataset):
-    def __init__(self, root_path="../data/beibei", behavior_list=["click","buy"]):
+    def __init__(self, root_path="../data/taobao", behavior_list=["click","buy"]):
         cprint(f'loading [{root_path}]')
         total_user_item_num_path = join(root_path, "ui_num.pkl")
         with open(total_user_item_num_path, "rb") as f:

@@ -4,9 +4,9 @@ import argparse
 def parse_args():
     parser = argparse.ArgumentParser()
     # datasst
-    parser.add_argument('--dataset', type=str, default='beibei',
+    parser.add_argument('--dataset', type=str, default='taobao',
                         help="dataset select")
-    parser.add_argument('--behaviors', type=str, default="['click', 'cart', 'buy']", help="behaviors order")
+    parser.add_argument('--behaviors', type=str, default="['click', ['fav', 'cart'], 'buy']", help="behaviors order")
     parser.add_argument('--out_behavior', type=int, default=-1, help="select a result of behavior to output")
     parser.add_argument('--seed', type=int, default=8888, help='random seed')
     parser.add_argument('--gpu_id', type=int, default="0", help="gpu id select")
