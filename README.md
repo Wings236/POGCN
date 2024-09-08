@@ -11,11 +11,11 @@ Finally, the whole method is called as **POGCN**.
 `pip install -r requirements.txt`
 
 ## Dataset
-We provide the processed datasets: taobao.
+We provide the processed datasets: taobao(click, favor, cart and buy).
 
 ## An example to run
 run POGCN on taobao dataset:
-  
+
 `cd code && python main.py --decay=1e-4 --lr=0.001 --layer=3 --seed=8888 --dataset="taobao" --behaviors "['click', ['fav', 'cart'], 'buy']" --level 1.0 --sample_level 1.0 --topks="[20]" --recdim=64`
 
 ## Citation
